@@ -54,3 +54,6 @@
 	default = tracking
 [rebase]
 	autosquash = true
+[user]
+	name = Roy Young
+	email = zhuoyuyang@gmail.com
