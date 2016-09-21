@@ -18,8 +18,8 @@
 	ln = log --pretty=format:'%Cblue%h %Cred* %C(yellow)%s'
 	reset-authors = commit --amend --reset-author -CHEAD
 	rmbranch = "!f(){ git branch -d ${1} && git push origin --delete ${1}; };f"
-[branch]
-	autosetuprebase = always
+; [branch]
+; 	autosetuprebase = always
 [color]
 	ui = auto
 [core]
@@ -57,3 +57,7 @@
 [user]
 	name = Roy Young
 	email = zhuoyuyang@gmail.com
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true

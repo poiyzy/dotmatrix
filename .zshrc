@@ -107,8 +107,11 @@ alias heroku='nocorrect heroku'
 cdpath=(~ ~/src $DEV_DIR $HASHROCKET_DIR)
 
 # rvm-install added line:
-if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then source "$HOME/.rvm/scripts/rvm" ; fi
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then source "$HOME/.rvm/scripts/rvm" ; fi
+# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# ruby env.
+export PATH="$HOME/.rbenv/bin:$PATH"
 
 cuke() {
   local file="$1"
@@ -126,3 +129,5 @@ zrcl="$HOME/.zshrc.local"
 
 # remove duplicates in $PATH
 typeset -aU path
+
+eval "$(rbenv init -)"
