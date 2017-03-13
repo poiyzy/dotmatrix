@@ -56,5 +56,7 @@ get_bundle jgdavey tslime.vim
 get_bundle jgdavey vim-turbux
 get_bundle jgdavey vim-weefactor
 get_bundle gregsexton gitv
+get_bundle tpope vim-projectionist
+get_bundle c-brenn phoenix.vim
 
 vim -c 'call pathogen#helptags()|q'
